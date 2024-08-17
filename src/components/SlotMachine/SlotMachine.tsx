@@ -121,8 +121,6 @@ export const SlotMachine = () => {
     return <section css={styles.root}>
 
         <h1>React Slot Machine</h1>
-        <span css={styles.subline}>Example by <a href="https://github.com/rex2go">@rex2go</a></span>
-
         <div css={styles.rowsContainer}>
             {
                 slots.map((slot) => 
@@ -141,17 +139,15 @@ export const SlotMachine = () => {
                 )
             }
         </div>
-
-        <button onClick={() => !spinning && spin()}>Spin</button>
-
+        <button onClick={() => !spinning && spin()}>ВРАЩАТЬ</button>
         <div css={styles.settingsContainer}>
             <label>
-                <span>Slot Count ({slotCount})</span>
+                <span>Число слотов ({slotCount})</span>
                 <input type="range" min="2" max="9" value={slotCount} onChange={(event) => !spinning && setSlotCount(parseInt(event.target.value))}></input>
             </label>
 
             <label>
-                <span>Item Count ({itemCount})</span>
+                <span>Число соответствий ({itemCount})</span>
                 <input type="range" min="16" max="256" value={itemCount} onChange={(event) => !spinning && setItemCount(parseInt(event.target.value))}></input>
             </label>
         </div>
