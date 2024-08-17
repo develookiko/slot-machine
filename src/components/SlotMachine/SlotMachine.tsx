@@ -79,9 +79,12 @@ export const SlotMachine = () => {
     useEffect(() => { generateSlots(slotCount, itemCount); }, [])
     useEffect(() => { generateSlots(slotCount, itemCount); }, [slotCount, itemCount]);
 
+    // Calculate the container height based on the number of active lines
+    const containerHeight = `calc(${lineCount + 2} * 5rem)`; // 1 line above, 1 below and active lines
+
     return <section css={styles.root}>
         <h1>Slot Machine - СЛОТЫ!!!</h1>
-        <div css={styles.rowsContainer}>
+        <div css={styles.rowsContainer} style={{ height: containerHeight }}>
             {
                 slots.map((slot) =>
                     <div css={styles.slotsContainer}
