@@ -91,7 +91,7 @@ export const SlotMachine = () => {
                         key={slot.id}
                         style={{
                             transform: `translateY(${slot.y})`,
-                            transitionDuration: `${slot.durationSeconds}s`
+                            transitionDuration: `${slot.durationSeconds} сек.`
                         }}>
                         {
                             slot.items.map((item) =>
