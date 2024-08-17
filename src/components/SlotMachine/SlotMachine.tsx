@@ -120,7 +120,7 @@ export const SlotMachine = () => {
 
     return <section css={styles.root}>
 
-        <h1>React Slot Machine</h1>
+        <h1>Slot Machine - СЛОТЫ!!!</h1>
         <div css={styles.rowsContainer}>
             {
                 slots.map((slot) => 
@@ -147,7 +147,7 @@ export const SlotMachine = () => {
             </label>
 
             <label>
-                <span>Число соответствий ({itemCount})</span>
+                <span>Разнообразие ({itemCount})</span>
                 <input type="range" min="16" max="256" value={itemCount} onChange={(event) => !spinning && setItemCount(parseInt(event.target.value))}></input>
             </label>
         </div>
