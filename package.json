@@ -1,9 +1,8 @@
 {
-  "name": "r",
+  "name": "slot-machine",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://rex2go.github.io/react-slot-machine",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
